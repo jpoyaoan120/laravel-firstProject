@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\userController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,8 @@ Route::get('/', function () {
 });
 
 Route::get('/users', [userController::class, 'index']);
+
+Route::get('/students', [StudentController::class, 'index']);
 
 // ----------------------------
 
