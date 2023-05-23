@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\userController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/users', [userController::class, 'index']);
+
 // ----------------------------
 
 // * Request *
@@ -30,25 +33,25 @@ Route::get('/', function () {
 // ----------------------------
 
 // * Response *
-Route::get('/users/{id}/{name}', function($id, $name){
-    return response($id.' - '.$name, 200);
-});
+// Route::get('/users/{id}/{name}', function($id, $name){
+//     return response($id.' - '.$name, 200);
+// });
 
-Route::get('/request-json', function(){
-    return response()
-        ->json(['name' => 'Jay-R',
-                'age' => '24'
-        ]);
-});
+// Route::get('/request-json', function(){
+//     return response()
+//         ->json(['name' => 'Jay-R',
+//                 'age' => '24'
+//         ]);
+// });
 
-Route::get('/request-download', function(){
+// Route::get('/request-download', function(){
 
-    $path = public_path().'/Test.txt';
-    $name = 'Sample.text';
-    $headers = array('Content-type: application/text-plain');
+//     $path = public_path().'/Test.txt';
+//     $name = 'Sample.text';
+//     $headers = array('Content-type: application/text-plain');
 
-    return response()->download($path, $name, $headers);
-});
+//     return response()->download($path, $name, $headers);
+// });
 
 // ----------------------------
 
