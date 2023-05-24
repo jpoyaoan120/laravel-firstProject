@@ -18,7 +18,7 @@ use App\Http\Controllers\StudentController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/users/{id}', [userController::class, 'index']);
