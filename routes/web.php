@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/users', [userController::class, 'index']);
+Route::get('/users/{id}', [userController::class, 'index']);
 
 Route::get('/students', [StudentController::class, 'index']);
 

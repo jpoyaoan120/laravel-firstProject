@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 
 class userController extends Controller
 {
-    public function index(){
+    public function index($id){
 
-        return "Test lang sa Class";
+        
+        return "Test lang sa Class".$id;
     }
 }
