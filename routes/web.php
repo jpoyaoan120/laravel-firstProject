@@ -17,13 +17,10 @@ use App\Http\Controllers\StudentController;
 */
 
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [StudentController::class, 'index']);
+Route::get('/login', [UserController::class, 'create']);
 
-Route::get('/users/{id}', [userController::class, 'index']);
 
-Route::get('/students', [StudentController::class, 'index']);
 
 // ----------------------------
 
