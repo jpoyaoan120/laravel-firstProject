@@ -1,11 +1,5 @@
 @include('partials.header')
-    @include('partials.nav_index')
-
-    {{-- <header class="max-w-lg mx-auto">
-        <a href="">
-            <h1  class="text-4xl font-bold text-center">Login</h1>
-        </a>
-    </header> --}}
+    <x-nav_bar/>
     <main class="my-20">
         <section>
             <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
