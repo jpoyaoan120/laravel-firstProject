@@ -20,6 +20,8 @@ use App\Http\Controllers\StudentController;
 Route::get('/', [StudentController::class, 'index']);
 Route::get('/login', [UserController::class, 'login']);
 Route::get('/registration', [UserController::class, 'registration']);
+Route::post('/store', [UserController::class, 'store']);
+
 
 
 
