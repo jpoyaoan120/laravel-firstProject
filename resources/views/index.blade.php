@@ -1,6 +1,8 @@
 @include('partials.header')
   <x-nav_bar/>
+{{-- {{ auth()->user()->name }} --}}
 
+  <x-messages/>
   <header class="max-w-lg mx-auto mt-20">
     <a href="">
         <h1  class="text-4xl font-bold text-center">Student List</h1>
