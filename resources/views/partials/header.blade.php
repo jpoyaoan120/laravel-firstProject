@@ -6,4 +6,4 @@
   <title>Laravel 9</title>
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="min-h-screen pt-12 pb-6 px-2">
+<body class="min-h-screen">

@@ -9,8 +9,9 @@ class StudentController extends Controller
 {
     public function index(){
 
-        $data = Students::all();
+        // $data = Students::all();
         
-        return view('index', ['data' => $data]);
+        // Please check AppServiceProvider.php
+        return view('index');
     }
 }
