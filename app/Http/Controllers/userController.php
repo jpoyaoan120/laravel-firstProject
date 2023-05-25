@@ -61,6 +61,7 @@ class UserController extends Controller
         $user = User::create($validated);
 
         auth()->login($user);
+        return redirect('/');
     }
 
     public function process(Request $request)
@@ -75,6 +76,8 @@ class UserController extends Controller
 
             return redirect('/')->with('message', 'Welcome back Master');
         }
+
+        return back()->withErrors(['email' => 'Login faild'])->onlyInput('email');
     }
 }
  

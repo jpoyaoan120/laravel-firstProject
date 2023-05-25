@@ -19,7 +19,7 @@ use App\Http\Controllers\StudentController;
 
 Route::get('/', [StudentController::class, 'index'])->middleware('auth');
 Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
-Route::get('/registration', [UserController::class, 'registration']);
+Route::get('/registration', [UserController::class, 'registration'])->middleware('guest');
 Route::post('/logout', [UserController::class, 'logout']);
 
 Route::post('/store', [UserController::class, 'store']);
