@@ -580,6 +580,12 @@ video {
 .mt-6 {
   margin-top: 1.5rem;
 }
+.mt-1 {
+  margin-top: 0.25rem;
+}
+.mt-3 {
+  margin-top: 0.75rem;
+}
 .block {
   display: block;
 }
@@ -783,6 +789,9 @@ video {
 .p-6 {
   padding: 1.5rem;
 }
+.p-3 {
+  padding: 0.75rem;
+}
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -952,6 +961,9 @@ video {
 .ring-white {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
+}
+.ring-gray-500\/10 {
+  --tw-ring-color: rgb(107 114 128 / 0.1);
 }
 .transition-all {
   transition-property: all;
