@@ -39,6 +39,6 @@ class StudentController extends Controller
     public function show($id){
         
         $data = Students::findOrFail($id);
-        dd($data);
+        return view('students.edit', ['student' => $data, 'title' => 'Edit Student Information']);
     }
 }
