@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Students;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 
 class StudentController extends Controller
@@ -40,5 +41,22 @@ class StudentController extends Controller
         
         $data = Students::findOrFail($id);
         return view('students.edit', ['student' => $data, 'title' => 'Edit Student Information']);
+    }
+
+    public function update(Request $request, $id) {
+
+        $validated = $request->validate([
+            "first_name" => ['required', 'min: 4'],
+            "last_name" => ['required', 'min: 4'],
+            "gender" => ['required'],
+            "age" => ['required'],
+            "email" => ['required', 'email'],
+            "updated_at" => now()
+        ]);
+
+        DB::table('students')->where('id', $id)->update($validated);
+
+       return back()->with('message', 'Successfully updated');
+
     }
 }

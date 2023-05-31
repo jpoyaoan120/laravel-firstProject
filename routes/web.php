@@ -29,6 +29,8 @@ Route::post('/login/process', [UserController::class, 'process']);
 Route::get('/add/student', [StudentController::class, 'create']);
 Route::post('/add/student', [StudentController::class, 'store']);
 Route::get('/student/{id}', [StudentController::class, 'show']);
+Route::put('/student/{id}', [StudentController::class, 'update']);
+
 
 
 
